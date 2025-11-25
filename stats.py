@@ -18,4 +18,8 @@ def count_characters(text):
     return count_characters
 
 
-#def sort_by_character(count_dict):
+def sort_by_character(count_dict):
+    charlist = []
+    for letter in count_dict:
+        charlist.append({"char": letter, "num": count_dict[letter]})
+    return charlist
