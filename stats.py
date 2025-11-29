@@ -22,4 +22,8 @@ def sort_by_character(count_dict):
     charlist = []
     for letter in count_dict:
         charlist.append({"char": letter, "num": count_dict[letter]})
+    charlist.sort(reverse=True, key=lambda num: num["num"])
     return charlist
+
+
+
