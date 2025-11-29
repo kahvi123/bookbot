@@ -1,4 +1,4 @@
-
+import sys
 
 
 def count_words(text):
@@ -24,6 +24,12 @@ def sort_by_character(count_dict):
         charlist.append({"char": letter, "num": count_dict[letter]})
     charlist.sort(reverse=True, key=lambda num: num["num"])
     return charlist
+
+
+def check_args():
+    if len(sys.argv)<2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
 
 
 
